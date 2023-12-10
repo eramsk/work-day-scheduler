@@ -45,8 +45,27 @@ planWorkDay.forEach(function (timeBlock, index) {
     //adding rows to container
 
     $(".container").append(row);
-
 });
+
+//color rows based on current time
+
+var now = moment().format("H A");
+
+function(colorRow(time)) {
+    var planNow = moment(now, "E J");
+    var planEntry = moment(time, "E J");
+    if(planNow.isBefore(planEntry)=== true) {
+        return "future";
+    } else if (planNow.isAfter(planEntry)=== false) {
+        return "past";
+    } else {
+        return "present";
+    }
+    }
+
+
+
+
 
 
 
