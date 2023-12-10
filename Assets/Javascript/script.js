@@ -19,7 +19,7 @@ var planWorkDay = [
 ];
 
 //check local storage
-var workEvents = JSON.parse(localStorage.getitem("work-day"));
+var workEvents = JSON.parse(localStorage.getItem("work-day"));
 if(workEvents) {
     planWorkDay = workEvents;
 }
@@ -49,9 +49,9 @@ planWorkDay.forEach(function (timeBlock, index) {
 
 //color rows based on current time
 
-var now = moment().format("H A");
+var now = moment().format("E J");
 
-function(colorRow(time)) {
+function colorRow(time) {
     var planNow = moment(now, "E J");
     var planEntry = moment(time, "E J");
     if(planNow.isBefore(planEntry)=== true) {
@@ -63,6 +63,24 @@ function(colorRow(time)) {
     }
     }
 
+// save the event 
+$(".saveBtn").on("click", function() {
+	var blockID = parseInt(
+		$(this)
+			.closest(".time-block")
+			.attr("id")
+	);
+	var userEntry = $.trim(
+		$(this)
+			.parent()
+			.siblings("textarea")
+			.val()
+	);
+	planWorkday[blockID].event = userEntry;
+
+	/* Set local storage */
+	localStorage.setItem("workDay", JSON.stringify(planWorkday));
+});
 
 
 
