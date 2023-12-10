@@ -20,6 +20,33 @@ var planWorkDay = [
 
 //check local storage
 var workEvents = JSON.parse(localStorage.getitem("work-day"));
-if(workEvents)=
+if(workEvents) {
+    planWorkDay = workEvents;
+}
+
+//check current day
+$("#currentDay").text(today);
+
+
+//create rows for the planner
+planWorkDay.forEach(function (timeBlock, index) {
+    var timeLabel = timeBlock.time;
+    var blockColor = colorRow(timeLabel);
+    var row = '<div class="time-block" id="' +
+    index +
+    '"><div class="row no-gutters input-group"><div class="col-sm col-lg-1 input-group-prepend hour justify-content-sm-end pr-3 pt-3">' +
+    timeLabel +
+    '</div><textarea class="form-control ' +
+    blockColor +
+    '">' +
+    timeBlock.event +
+    '</textarea><div class="col-sm col-lg-1 input-group-append"><button class="saveBtn btn-block" type="submit"><i class="fas fa-save"></i></button></div></div></div>';
+
+    //adding rows to container
+
+    $(".container").append(row);
+
+});
+
 
 
