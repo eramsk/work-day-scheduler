@@ -19,7 +19,7 @@ textarea {
   color:#000000;
   border-radius: 0;
   border-bottom: 10px solid black;
-  /*padding: 60px;*/
+  padding: 60px;
 }
 
 .description {
@@ -38,7 +38,7 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color:coral;
   color: #000000;
   border-top: 1px dashed #000000;
 }
@@ -71,13 +71,13 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.time {
-  background-color: aqua;
+#currentDay {
+  background-color:aquamarine;
   border-radius: 30px;
   margin: 0 auto;
   width: 50%;
   padding: 10px;
-  color:white;
+  color:black;
   font-size: 20px;
   margin-top: 20px;
 }
