@@ -27,3 +27,7 @@ https://eramsk.github.io/work-day-scheduler/
 https://github.com/eramsk/work-day-scheduler.git
 
 # Screenshots:
+
+![Screenshot1](https://github.com/eramsk/work-day-scheduler/blob/main/Assets/Images/Screenshot1.png?raw=true)
+![Screenshot2](https://github.com/eramsk/work-day-scheduler/blob/main/Assets/Images/Screenshot2.png?raw=true)
+![Screenshot3](https://github.com/eramsk/work-day-scheduler/blob/main/Assets/Images/Screenshot3.png?raw=true)
